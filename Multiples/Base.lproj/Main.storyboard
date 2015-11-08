@@ -22,7 +22,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <animations/>
                             </imageView>
-                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="MULTIPLES" translatesAutoresizingMaskIntoConstraints="NO" id="Ion-Bl-yka">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="MULTIPLES" translatesAutoresizingMaskIntoConstraints="NO" id="Ion-Bl-yka">
                                 <rect key="frame" x="149" y="33" width="302" height="69"/>
                                 <animations/>
                                 <constraints>
@@ -30,7 +30,7 @@
                                     <constraint firstAttribute="width" constant="302" id="Quo-kC-fJm"/>
                                 </constraints>
                             </imageView>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gEs-Ax-OHF">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gEs-Ax-OHF">
                                 <rect key="frame" x="173" y="337" width="255" height="210"/>
                                 <animations/>
                                 <constraints>
@@ -38,8 +38,11 @@
                                     <constraint firstAttribute="width" constant="255" id="wBc-S8-tPL"/>
                                 </constraints>
                                 <state key="normal" image="play"/>
+                                <connections>
+                                    <action selector="onPlayButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zlt-6C-Vfs"/>
+                                </connections>
                             </button>
-                            <textField hidden="YES" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="What multiple to add by?" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3LE-Ci-Kzh">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="What multiple to add by?" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3LE-Ci-Kzh">
                                 <rect key="frame" x="173" y="268" width="255" height="30"/>
                                 <animations/>
                                 <constraints>
@@ -49,7 +52,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Press Add to add!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DdU-B9-CkH">
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DdU-B9-CkH">
                                 <rect key="frame" x="81" y="122" width="438" height="57"/>
                                 <animations/>
                                 <constraints>
@@ -60,7 +63,7 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kaV-KE-6G5">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kaV-KE-6G5">
                                 <rect key="frame" x="195" y="391" width="211" height="101"/>
                                 <animations/>
                                 <constraints>
@@ -68,6 +71,9 @@
                                     <constraint firstAttribute="height" constant="101" id="af2-1S-6hZ"/>
                                 </constraints>
                                 <state key="normal" image="add"/>
+                                <connections>
+                                    <action selector="onAddClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TKR-ow-SGA"/>
+                                </connections>
                             </button>
                         </subviews>
                         <animations/>
@@ -89,6 +95,13 @@
                             <constraint firstItem="Ion-Bl-yka" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="zvL-Z5-sjQ"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="addButton" destination="kaV-KE-6G5" id="Jub-Cw-HWq"/>
+                        <outlet property="entryField" destination="3LE-Ci-Kzh" id="0hr-9B-FEJ"/>
+                        <outlet property="logo" destination="Ion-Bl-yka" id="MKS-Il-xLM"/>
+                        <outlet property="playButton" destination="gEs-Ax-OHF" id="X7Z-1M-NzG"/>
+                        <outlet property="resultLabel" destination="DdU-B9-CkH" id="Ssg-fe-1AC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
