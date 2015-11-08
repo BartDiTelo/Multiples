@@ -9,10 +9,10 @@
 import UIKit
 
 class ViewController: UIViewController {
-
-    var multipier: Int = 0
-    var currenValue: Int = 0
-    let maxVale: Int = 50
+    
+    var multipier: Double = 0
+    var currenValue: Double = 0
+    let maxVale: Double = 50
     
     @IBOutlet weak var playButton: UIButton!
     @IBOutlet weak var logo: UIImageView!
@@ -65,7 +65,7 @@ class ViewController: UIViewController {
         resultLabel.hidden = false
         
         currenValue = 0
-        multipier = Int(entryField.text!)!
+        multipier = Double(entryField.text!)!
         resultLabel.text = "Press ADD to add!"
     }
 
